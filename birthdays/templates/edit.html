@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <h2>Edit a Birthday</h2>
+    <!-- Edit an existing birthday retrieving id, and inserting name, month, day from db -->
+    <form action="/" method="post">
+        <input type="hidden" name="id" value= "{{ id }}">
+        <input type="text" name="name" value= "{{ name }}" >
+        <input type="number" name="month" value= "{{ month }}"  required min="1" max="12">
+        <input type="number" name="day"  value= "{{ day }}" required min="1" max="31">
+        <button type="submit">Edit Entry</button>
+    </form>
+
+{% endblock %}
